@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ali442115450products.props" />
+</Project>

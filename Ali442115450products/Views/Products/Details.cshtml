@@ -1,0 +1,18 @@
+﻿@model Product;
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1 class="text-4xl text-center text-teal-500 mb-10">Product Details</h1>
+       @{var image = "/products/" + Model.Id + ".jpg";}
+        <div class="max-w-lg rounded overflow-hidden shadow-lg mx-auto" style="min-height:450px;">
+  <img class="w-50 m-auto" src="@image" alt="@Model.Name">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">@Model.Name</div>
+
+  </div>
+  <div class="px-6 pt-4 pb-2 flex justify-between">
+        <a href=".."><span class=" bg-red-800 rounded px-3 py-1 text-sm font-semibold text-white mb-2">عد الى المنتجات</span></a>
+            <span class=" bg-teal-500 rounded-full px-3 py-1 text-sm font-semibold text-white mb-2">السعر : @Model.Price ريال</span>
+  </div>
+</div>
