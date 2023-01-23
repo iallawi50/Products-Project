@@ -7,7 +7,7 @@ namespace Ali442115450products.Controllers
     public class ProductsController : Controller
     {
 
-        private List<Product> myProducts()
+        private List<Product> Products()
         {
 
             List<Product> products = new List<Product>();
@@ -83,12 +83,12 @@ namespace Ali442115450products.Controllers
         public IActionResult Index()
         {
              
-            return View(myProducts());
+            return View(Products());
         }
 
         public IActionResult Details(int id)
         {
-            foreach (var item in myProducts())
+            foreach (var item in Products())
             {
                 if (item.Id != id)
                 {
